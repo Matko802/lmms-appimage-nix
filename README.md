@@ -15,7 +15,7 @@ SoundFont2, GIG player, Carla/LV2 and all native instruments and effects.
 ## Try it
 
 ```bash
-nix run github:<you>/lmms-appimage
+nix run github:Matko802/lmms-appimage-nix
 ```
 
 ## Use in your NixOS flake
@@ -23,7 +23,7 @@ nix run github:<you>/lmms-appimage
 ```nix
 # flake.nix inputs
 lmms-appimage = {
-  url = "github:<you>/lmms-appimage";
+  url = "github:Matko802/lmms-appimage-nix";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
