@@ -16,6 +16,9 @@ appimageTools.wrapAppImage {
 
   extraInstallCommands = ''
     install -m 444 -D ${appimageContents}/lmms.desktop $out/share/applications/lmms.desktop
+    chmod u+w $out/share/applications/lmms.desktop
+    echo "StartupWMClass=AppRun.wrapped" >> $out/share/applications/lmms.desktop
+    chmod 444 $out/share/applications/lmms.desktop
     cp -r ${appimageContents}/usr/share/icons $out/share/icons
   '';
 
