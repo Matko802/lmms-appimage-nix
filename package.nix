@@ -10,10 +10,9 @@ let
 
   appimageContents = appimageTools.extract { inherit pname version src; };
 in
-appimageTools.wrapType2 {
-  inherit pname version src;
-
-  extraPkgs = pkgs: [ ];
+appimageTools.wrapAppImage {
+  inherit pname version;
+  src = appimageContents;
 
   extraInstallCommands = ''
     install -m 444 -D ${appimageContents}/lmms.desktop $out/share/applications/lmms.desktop
