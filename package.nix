@@ -13,10 +13,6 @@ in
 appimageTools.wrapType2 {
   inherit pname version src;
 
-  # The default FHS env already ships ALSA / JACK / PulseAudio / PipeWire
-  # client libs, so no extraPkgs are needed. If you use Windows VSTs through
-  # the AppImage's Wine bridge, add `wineWowPackages.stable` to your system
-  # packages separately (deliberately not a hard dep: huge closure).
   extraPkgs = pkgs: [ ];
 
   extraInstallCommands = ''
